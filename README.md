@@ -1,0 +1,4 @@
+QBAnimationSequence
+===================
+
+UIView animation sequencer
