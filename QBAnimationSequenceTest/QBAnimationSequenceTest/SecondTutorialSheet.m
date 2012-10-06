@@ -31,16 +31,16 @@
         _view2.image = [UIImage imageNamed:@"view_surface.png"];
         [_view1 addSubview:_view2];
         
-        QBAnimationItem *item1 = [[[QBAnimationItem alloc] initWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationItem *item1 = [QBAnimationItem itemWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view2.frame = CGRectMake(95, 0, 120, 180);
-        }] autorelease];
+        }];
         
-        QBAnimationItem *item2 = [[[QBAnimationItem alloc] initWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationItem *item2 = [QBAnimationItem itemWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view2.frame = CGRectMake(0, 0, 120, 180);
-        }] autorelease];
+        }];
         
-        QBAnimationGroup *group1 = [[[QBAnimationGroup alloc] initWithItems:@[item1]] autorelease];
-        QBAnimationGroup *group2 = [[[QBAnimationGroup alloc] initWithItems:@[item2]] autorelease];
+        QBAnimationGroup *group1 = [QBAnimationGroup groupWithItems:@[item1]];
+        QBAnimationGroup *group2 = [QBAnimationGroup groupWithItems:@[item2]];
         
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[group1, group2] repeat:YES];
         [_sequence start];

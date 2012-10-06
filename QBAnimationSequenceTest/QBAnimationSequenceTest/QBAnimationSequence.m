@@ -56,10 +56,10 @@
     _currentGroup = -1;
     _finishedCount = 0;
     
-    [self nextGroup];
+    [self performNextGroup];
 }
 
-- (void)nextGroup
+- (void)performNextGroup
 {
     if(_currentGroup >= (NSInteger)(self.groups.count - 1)) {
         if(self.repeat) {
@@ -86,7 +86,7 @@
     }
     
     if(!group.waitUntilDone) {
-        [self nextGroup];
+        [self performNextGroup];
     }
 }
 
@@ -99,13 +99,8 @@
     if(_finishedCount == (NSInteger)group.items.count) {
         _finishedCount = 0;
         
-        [self nextGroup];
+        [self performNextGroup];
     }
-}
-
-- (void)stop
-{
-    
 }
 
 @end

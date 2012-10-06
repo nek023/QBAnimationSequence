@@ -8,6 +8,8 @@
 
 #import "QBAnimationGroup.h"
 
+//#import "QBAnimationItem.h"
+
 @implementation QBAnimationGroup
 
 @synthesize items = _items;
@@ -23,6 +25,11 @@
     }
     
     return self;
+}
+
++ (id)groupWithItems:(NSArray *)items
+{
+    return [[[self alloc] initWithItems:items] autorelease];
 }
 
 - (id)initWithItems:(NSArray *)items

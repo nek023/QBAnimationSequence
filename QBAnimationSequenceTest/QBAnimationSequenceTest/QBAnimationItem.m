@@ -15,6 +15,11 @@
 @synthesize options = _options;
 @synthesize animations = _animations;
 
++ (id)itemWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
+{
+    return [[[self alloc] initWithDuration:duration delay:delay options:options animations:animations] autorelease];
+}
+
 - (id)init
 {
     self = [super init];

@@ -30,20 +30,20 @@
         _view2.image = [UIImage imageNamed:@"cloud.png"];
         [self addSubview:_view2];
         
-        QBAnimationItem *item1 = [[[QBAnimationItem alloc] initWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction animations:^{
+        QBAnimationItem *item1 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction animations:^{
             _view1.transform = CGAffineTransformRotate(_view1.transform, M_PI/4);
-        }] autorelease];
+        }];
         
-        QBAnimationItem *item2 = [[QBAnimationItem alloc] initWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction animations:^ {
+        QBAnimationItem *item2 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction animations:^ {
             _view2.transform = CGAffineTransformMakeScale(1.4, 1.4);
         }];
         
-        QBAnimationItem *item3 = [[QBAnimationItem alloc] initWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^ {
+        QBAnimationItem *item3 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^ {
             _view2.transform = CGAffineTransformMakeScale(1, 1);
         }];
         
-        QBAnimationGroup *group1 = [[[QBAnimationGroup alloc] initWithItems:@[item1, item2]] autorelease];
-        QBAnimationGroup *group2 = [[[QBAnimationGroup alloc] initWithItems:@[item1, item3]] autorelease];
+        QBAnimationGroup *group1 = [QBAnimationGroup groupWithItems:@[item1, item2]];
+        QBAnimationGroup *group2 = [QBAnimationGroup groupWithItems:@[item1, item3]];
         
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[group1, group2] repeat:YES];
         [_sequence start];

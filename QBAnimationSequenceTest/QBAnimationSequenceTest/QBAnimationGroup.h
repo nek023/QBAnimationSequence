@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign) BOOL waitUntilDone;
 
++ (id)groupWithItems:(NSArray *)items;
 - (id)initWithItems:(NSArray *)items;
 
 @end

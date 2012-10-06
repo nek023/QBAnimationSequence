@@ -29,8 +29,7 @@ typedef enum {
 - (id)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
 
 - (void)start;
-- (void)nextGroup;
+- (void)performNextGroup;
 - (void)animationFinished;
-- (void)stop;
 
 @end

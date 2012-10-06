@@ -23,6 +23,7 @@ typedef void (^QBAnimationBlock)(void);
 @property (nonatomic, assign) UIViewAnimationOptions options;
 @property (nonatomic, copy) QBAnimationBlock animations;
 
++ (id)itemWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations;
 - (id)initWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations;
 
 @end
