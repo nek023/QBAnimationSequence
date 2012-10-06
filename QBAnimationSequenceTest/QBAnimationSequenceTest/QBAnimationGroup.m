@@ -27,9 +27,25 @@
     return self;
 }
 
++ (id)groupWithItem:(QBAnimationItem *)item
+{
+    return [[[self alloc] initWithItem:item] autorelease];
+}
+
 + (id)groupWithItems:(NSArray *)items
 {
     return [[[self alloc] initWithItems:items] autorelease];
+}
+
+- (id)initWithItem:(QBAnimationItem *)item
+{
+    self = [self init];
+    
+    if(self) {
+        self.items = [NSArray arrayWithObject:item];
+    }
+    
+    return self;
 }
 
 - (id)initWithItems:(NSArray *)items

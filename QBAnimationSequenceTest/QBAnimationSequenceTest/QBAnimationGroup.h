@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class QBAnimationItem;
+
 @interface QBAnimationGroup : NSObject
 {
     NSArray *_items;
@@ -17,7 +19,10 @@
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign) BOOL waitUntilDone;
 
++ (id)groupWithItem:(QBAnimationItem *)item;
 + (id)groupWithItems:(NSArray *)items;
+
+- (id)initWithItem:(QBAnimationItem *)item;
 - (id)initWithItems:(NSArray *)items;
 
 @end

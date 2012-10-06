@@ -46,55 +46,55 @@
         _view6.image = [UIImage imageNamed:@"balloon6.png"];
         [self addSubview:_view6];
         
-        QBAnimationItem *ex1 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex1 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view1.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh1 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh1 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view1.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *ex2 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex2 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view2.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh2 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh2 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view2.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *ex3 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex3 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view3.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh3 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh3 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view3.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *ex4 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex4 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view4.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh4 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh4 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view4.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *ex5 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex5 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view5.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh5 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh5 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view5.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *ex6 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *ex6 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view6.transform = CGAffineTransformMakeScale(1.32, 1.32);
-        }];
+        }]];
         
-        QBAnimationItem *sh6 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        QBAnimationGroup *sh6 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _view6.transform = CGAffineTransformMakeScale(1, 1);
-        }];
+        }]];
         
-        QBAnimationItem *move1 = [QBAnimationItem itemWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        QBAnimationGroup *move1 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             CGRect rect1 = _view1.frame;
             rect1.origin.x += 84;
             _view1.frame = rect1;
@@ -118,9 +118,9 @@
             CGRect rect6 = _view6.frame;
             rect6.origin.x += 84;
             _view6.frame = rect6;
-        }];
+        }]];
         
-        QBAnimationItem *move2 = [QBAnimationItem itemWithDuration:0 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        QBAnimationGroup *move2 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             CGRect rect1 = _view1.frame;
             if(rect1.origin.x > 320) rect1.origin.x = -122;
             _view1.frame = rect1;
@@ -144,36 +144,21 @@
             CGRect rect6 = _view6.frame;
             if(rect6.origin.x > 320) rect6.origin.x = -122;
             _view6.frame = rect6;
-        }];
-        
-        QBAnimationGroup *group_move1 = [QBAnimationGroup groupWithItems:@[move1]];
-        QBAnimationGroup *group_move2 = [QBAnimationGroup groupWithItems:@[move2]];
-        QBAnimationGroup *group_ex4 = [QBAnimationGroup groupWithItems:@[ex4]];
-        QBAnimationGroup *group_sh4 = [QBAnimationGroup groupWithItems:@[sh4]];
-        QBAnimationGroup *group_ex3 = [QBAnimationGroup groupWithItems:@[ex3]];
-        QBAnimationGroup *group_sh3 = [QBAnimationGroup groupWithItems:@[sh3]];
-        QBAnimationGroup *group_ex2 = [QBAnimationGroup groupWithItems:@[ex2]];
-        QBAnimationGroup *group_sh2 = [QBAnimationGroup groupWithItems:@[sh2]];
-        QBAnimationGroup *group_ex1 = [QBAnimationGroup groupWithItems:@[ex1]];
-        QBAnimationGroup *group_sh1 = [QBAnimationGroup groupWithItems:@[sh1]];
-        QBAnimationGroup *group_ex6 = [QBAnimationGroup groupWithItems:@[ex6]];
-        QBAnimationGroup *group_sh6 = [QBAnimationGroup groupWithItems:@[sh6]];
-        QBAnimationGroup *group_ex5 = [QBAnimationGroup groupWithItems:@[ex5]];
-        QBAnimationGroup *group_sh5 = [QBAnimationGroup groupWithItems:@[sh5]];
+        }]];
         
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[
-                     group_ex4, group_sh4,
-                     group_move1, group_move2,
-                     group_ex3, group_sh3,
-                     group_move1, group_move2,
-                     group_ex2, group_sh2,
-                     group_move1, group_move2,
-                     group_ex1, group_sh1,
-                     group_move1, group_move2,
-                     group_ex6, group_sh6,
-                     group_move1, group_move2,
-                     group_ex5, group_sh5,
-                     group_move1, group_move2,
+                     ex4, sh4,
+                     move1, move2,
+                     ex3, sh3,
+                     move1, move2,
+                     ex2, sh2,
+                     move1, move2,
+                     ex1, sh1,
+                     move1, move2,
+                     ex6, sh6,
+                     move1, move2,
+                     ex5, sh5,
+                     move1, move2,
                      ] repeat:YES];
         [_sequence start];
     }
