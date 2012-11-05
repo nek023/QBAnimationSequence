@@ -13,13 +13,6 @@
 @interface FirstTutorialSheet : UIView
 {
     QBAnimationSequence *_sequence;
-    
-    UIImageView *_view1;
-    UIImageView *_view2;
-    UIImageView *_view3;
-    UIImageView *_view4;
-    UIImageView *_view5;
-    UIImageView *_view6;
 }
 
 @end

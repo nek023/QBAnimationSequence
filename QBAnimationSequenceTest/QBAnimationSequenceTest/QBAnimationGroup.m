@@ -8,12 +8,9 @@
 
 #import "QBAnimationGroup.h"
 
-//#import "QBAnimationItem.h"
+#import "QBAnimationItem.h"
 
 @implementation QBAnimationGroup
-
-@synthesize items = _items;
-@synthesize waitUntilDone = _waitUntilDone;
 
 - (id)init
 {
@@ -57,6 +54,13 @@
     }
     
     return self;
+}
+
+- (void)dealloc
+{
+    [_items release];
+    
+    [super dealloc];
 }
 
 @end

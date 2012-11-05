@@ -11,12 +11,6 @@
 typedef void (^QBAnimationBlock)(void);
 
 @interface QBAnimationItem : NSObject
-{
-    CGFloat _duration;
-    CGFloat _delay;
-    UIViewAnimationOptions _options;
-    QBAnimationBlock _animations;
-}
 
 @property (nonatomic, assign) CGFloat duration;
 @property (nonatomic, assign) CGFloat delay;

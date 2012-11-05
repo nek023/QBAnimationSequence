@@ -22,22 +22,25 @@
         self.backgroundColor = [UIColor whiteColor];
         self.clipsToBounds = YES;
         
-        _view1 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 30, 120, 180)];
-        _view1.image = [UIImage imageNamed:@"view_bg.png"];
-        _view1.clipsToBounds = YES;
-        [self addSubview:_view1];
+        UIImageView *view1 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 30, 120, 180)];
+        view1.image = [UIImage imageNamed:@"view_bg.png"];
+        view1.clipsToBounds = YES;
+        [self addSubview:view1];
         
-        _view2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 180)];
-        _view2.image = [UIImage imageNamed:@"view_surface.png"];
-        [_view1 addSubview:_view2];
+        UIImageView *view2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 180)];
+        view2.image = [UIImage imageNamed:@"view_surface.png"];
+        [view1 addSubview:view2];
         
         QBAnimationGroup *group1 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            _view2.frame = CGRectMake(95, 0, 120, 180);
+            view2.frame = CGRectMake(95, 0, 120, 180);
         }]];
         
         QBAnimationGroup *group2 = [QBAnimationGroup groupWithItem:[QBAnimationItem itemWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            _view2.frame = CGRectMake(0, 0, 120, 180);
+            view2.frame = CGRectMake(0, 0, 120, 180);
         }]];
+        
+        [view1 release];
+        [view2 release];
         
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[group1, group2] repeat:YES];
         [_sequence start];
@@ -49,9 +52,6 @@
 - (void)dealloc
 {
     [_sequence release];
-    
-    [_view1 release];
-    [_view2 release];
     
     [super dealloc];
 }

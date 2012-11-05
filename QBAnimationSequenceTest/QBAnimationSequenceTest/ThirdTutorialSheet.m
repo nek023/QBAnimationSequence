@@ -22,25 +22,28 @@
         self.backgroundColor = [UIColor whiteColor];
         self.clipsToBounds = YES;
         
-        _view1 = [[UIImageView alloc] initWithFrame:CGRectMake(80, 40, 160, 160)];
-        _view1.image = [UIImage imageNamed:@"sync.png"];
-        [self addSubview:_view1];
+        UIImageView *view1 = [[UIImageView alloc] initWithFrame:CGRectMake(80, 40, 160, 160)];
+        view1.image = [UIImage imageNamed:@"sync.png"];
+        [self addSubview:view1];
         
-        _view2 = [[UIImageView alloc] initWithFrame:CGRectMake(130, 90, 60, 60)];
-        _view2.image = [UIImage imageNamed:@"cloud.png"];
-        [self addSubview:_view2];
+        UIImageView *view2 = [[UIImageView alloc] initWithFrame:CGRectMake(130, 90, 60, 60)];
+        view2.image = [UIImage imageNamed:@"cloud.png"];
+        [self addSubview:view2];
         
         QBAnimationItem *item1 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction animations:^{
-            _view1.transform = CGAffineTransformRotate(_view1.transform, M_PI/4);
+            view1.transform = CGAffineTransformRotate(view1.transform, M_PI/4);
         }];
         
         QBAnimationItem *item2 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction animations:^ {
-            _view2.transform = CGAffineTransformMakeScale(1.4, 1.4);
+            view2.transform = CGAffineTransformMakeScale(1.4, 1.4);
         }];
         
         QBAnimationItem *item3 = [QBAnimationItem itemWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^ {
-            _view2.transform = CGAffineTransformMakeScale(1, 1);
+            view2.transform = CGAffineTransformMakeScale(1, 1);
         }];
+        
+        [view1 release];
+        [view2 release];
         
         QBAnimationGroup *group1 = [QBAnimationGroup groupWithItems:@[item1, item2]];
         QBAnimationGroup *group2 = [QBAnimationGroup groupWithItems:@[item1, item3]];
@@ -55,9 +58,6 @@
 - (void)dealloc
 {
     [_sequence release];
-    
-    [_view1 release];
-    [_view2 release];
     
     [super dealloc];
 }

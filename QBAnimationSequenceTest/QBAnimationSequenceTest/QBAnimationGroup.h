@@ -11,10 +11,6 @@
 @class QBAnimationItem;
 
 @interface QBAnimationGroup : NSObject
-{
-    NSArray *_items;
-    BOOL _waitUntilDone;
-}
 
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign) BOOL waitUntilDone;

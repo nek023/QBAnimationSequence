@@ -13,9 +13,6 @@
 
 @implementation QBAnimationSequence
 
-@synthesize groups = _groups;
-@synthesize repeat = _repeat;
-
 - (id)init
 {
     self = [super init];
@@ -23,6 +20,8 @@
     if(self) {
         self.groups = nil;
         self.repeat = NO;
+        
+        _running = NO;
     }
     
     return self;
@@ -51,25 +50,44 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_groups release];
+    
+    [super dealloc];
+}
+
 - (void)start
 {
-    _currentGroup = -1;
+    if(_running)
+        return;
+    
+    _running = YES;
+    
+    _currentGroup = 0;
     _finishedCount = 0;
     
     [self performNextGroup];
 }
 
+- (void)stop
+{
+    _running = NO;
+}
+
 - (void)performNextGroup
 {
-    if(_currentGroup >= (NSInteger)(self.groups.count - 1)) {
+    if(!_running)
+        return;
+    
+    if(_currentGroup >= self.groups.count) {
         if(self.repeat) {
+            _running = NO;
             [self start];
         }
         
         return;
     }
-    
-    _currentGroup++;
     
     QBAnimationGroup *group = (QBAnimationGroup *)[self.groups objectAtIndex:_currentGroup];
     
@@ -86,6 +104,7 @@
     }
     
     if(!group.waitUntilDone) {
+        _currentGroup++;
         [self performNextGroup];
     }
 }
@@ -96,9 +115,10 @@
     
     QBAnimationGroup *group = (QBAnimationGroup *)[self.groups objectAtIndex:_currentGroup];
     
-    if(_finishedCount == (NSInteger)group.items.count) {
+    if(_finishedCount == group.items.count) {
         _finishedCount = 0;
         
+        _currentGroup++;
         [self performNextGroup];
     }
 }

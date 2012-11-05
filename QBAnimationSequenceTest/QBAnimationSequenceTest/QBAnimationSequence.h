@@ -15,11 +15,9 @@ typedef enum {
 
 @interface QBAnimationSequence : NSObject
 {
-    NSArray *_groups;
-    BOOL _repeat;
-    
-    NSInteger _currentGroup;
-    NSInteger _finishedCount;
+    BOOL _running;
+    NSUInteger _currentGroup;
+    NSUInteger _finishedCount;
 }
 
 @property (nonatomic, copy) NSArray *groups;
@@ -29,6 +27,7 @@ typedef enum {
 - (id)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
 
 - (void)start;
+- (void)stop;
 - (void)performNextGroup;
 - (void)animationFinished;
 
