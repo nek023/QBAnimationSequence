@@ -1,6 +1,7 @@
 # QBAnimationSequence
 QBAnimationSequence is a library for controlling continuous view animations.
 
+
 ## Installation
 `#import "QBAnimationSequence.h"` in your ViewController
 
