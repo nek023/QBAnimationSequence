@@ -1,9 +1,9 @@
 //
 //  main.m
-//  QBAnimationSequenceTest
+//  QBAnimationSequence
 //
-//  Created by questbeat on 2012/09/29.
-//  Copyright (c) 2012年 questbeat. All rights reserved.
+//  Created by Katsuma Tanaka on 2013/01/31.
+//  Copyright (c) 2013年 Katsuma Tanaka. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

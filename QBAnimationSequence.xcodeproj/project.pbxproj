@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAF51F6716BA40970003903A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF51F6616BA40970003903A /* UIKit.framework */; };
+		AAF51F6916BA40970003903A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF51F6816BA40970003903A /* Foundation.framework */; };
+		AAF51F6B16BA40970003903A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF51F6A16BA40970003903A /* CoreGraphics.framework */; };
+		AAF51F7116BA40970003903A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F6F16BA40970003903A /* InfoPlist.strings */; };
+		AAF51F7316BA40970003903A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F7216BA40970003903A /* main.m */; };
+		AAF51F7716BA40970003903A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F7616BA40970003903A /* AppDelegate.m */; };
+		AAF51F7916BA40970003903A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F7816BA40970003903A /* Default.png */; };
+		AAF51F7B16BA40970003903A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F7A16BA40970003903A /* Default@2x.png */; };
+		AAF51F7D16BA40970003903A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F7C16BA40970003903A /* Default-568h@2x.png */; };
+		AAF51F8016BA40970003903A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F7E16BA40970003903A /* MainStoryboard.storyboard */; };
+		AAF51F8316BA40970003903A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F8216BA40970003903A /* ViewController.m */; };
+		AAF51F8F16BA40C10003903A /* QBAnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F8A16BA40C10003903A /* QBAnimationGroup.m */; };
+		AAF51F9016BA40C10003903A /* QBAnimationSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F8C16BA40C10003903A /* QBAnimationSequence.m */; };
+		AAF51F9116BA40C10003903A /* QBAnimationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F8E16BA40C10003903A /* QBAnimationItem.m */; };
+		AAF51F9916BA41230003903A /* FirstTutorialSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F9416BA41230003903A /* FirstTutorialSheet.m */; };
+		AAF51F9A16BA41230003903A /* SecondTutorialSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F9616BA41230003903A /* SecondTutorialSheet.m */; };
+		AAF51F9B16BA41230003903A /* ThirdTutorialSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF51F9816BA41230003903A /* ThirdTutorialSheet.m */; };
+		AAF51FA916BA41570003903A /* balloon1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F9D16BA41570003903A /* balloon1.png */; };
+		AAF51FAA16BA41570003903A /* balloon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F9E16BA41570003903A /* balloon1@2x.png */; };
+		AAF51FAB16BA41570003903A /* balloon2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51F9F16BA41570003903A /* balloon2.png */; };
+		AAF51FAC16BA41570003903A /* balloon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA016BA41570003903A /* balloon2@2x.png */; };
+		AAF51FAD16BA41570003903A /* balloon3.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA116BA41570003903A /* balloon3.png */; };
+		AAF51FAE16BA41570003903A /* balloon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA216BA41570003903A /* balloon3@2x.png */; };
+		AAF51FAF16BA41570003903A /* balloon4.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA316BA41570003903A /* balloon4.png */; };
+		AAF51FB016BA41570003903A /* balloon4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA416BA41570003903A /* balloon4@2x.png */; };
+		AAF51FB116BA41570003903A /* balloon5.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA516BA41570003903A /* balloon5.png */; };
+		AAF51FB216BA41570003903A /* balloon5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA616BA41570003903A /* balloon5@2x.png */; };
+		AAF51FB316BA41570003903A /* balloon6.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA716BA41570003903A /* balloon6.png */; };
+		AAF51FB416BA41570003903A /* balloon6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FA816BA41570003903A /* balloon6@2x.png */; };
+		AAF51FBF16BA41880003903A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FB716BA41880003903A /* cloud.png */; };
+		AAF51FC016BA41880003903A /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FB816BA41880003903A /* cloud@2x.png */; };
+		AAF51FC116BA41880003903A /* sync.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FB916BA41880003903A /* sync.png */; };
+		AAF51FC216BA41880003903A /* sync@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FBA16BA41880003903A /* sync@2x.png */; };
+		AAF51FC316BA41880003903A /* view_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FBB16BA41880003903A /* view_bg.png */; };
+		AAF51FC416BA41880003903A /* view_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FBC16BA41880003903A /* view_bg@2x.png */; };
+		AAF51FC516BA41880003903A /* view_surface.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FBD16BA41880003903A /* view_surface.png */; };
+		AAF51FC616BA41880003903A /* view_surface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF51FBE16BA41880003903A /* view_surface@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAF51F6316BA40970003903A /* QBAnimationSequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBAnimationSequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF51F6616BA40970003903A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AAF51F6816BA40970003903A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AAF51F6A16BA40970003903A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AAF51F6E16BA40970003903A /* QBAnimationSequence-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QBAnimationSequence-Info.plist"; sourceTree = "<group>"; };
+		AAF51F7016BA40970003903A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAF51F7216BA40970003903A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAF51F7416BA40970003903A /* QBAnimationSequence-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QBAnimationSequence-Prefix.pch"; sourceTree = "<group>"; };
+		AAF51F7516BA40970003903A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAF51F7616BA40970003903A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAF51F7816BA40970003903A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AAF51F7A16BA40970003903A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AAF51F7C16BA40970003903A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AAF51F7F16BA40970003903A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AAF51F8116BA40970003903A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AAF51F8216BA40970003903A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAF51F8916BA40C10003903A /* QBAnimationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAnimationGroup.h; sourceTree = "<group>"; };
+		AAF51F8A16BA40C10003903A /* QBAnimationGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAnimationGroup.m; sourceTree = "<group>"; };
+		AAF51F8B16BA40C10003903A /* QBAnimationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAnimationItem.h; sourceTree = "<group>"; };
+		AAF51F8C16BA40C10003903A /* QBAnimationSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAnimationSequence.m; sourceTree = "<group>"; };
+		AAF51F8D16BA40C10003903A /* QBAnimationSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAnimationSequence.h; sourceTree = "<group>"; };
+		AAF51F8E16BA40C10003903A /* QBAnimationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAnimationItem.m; sourceTree = "<group>"; };
+		AAF51F9316BA41230003903A /* FirstTutorialSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTutorialSheet.h; sourceTree = "<group>"; };
+		AAF51F9416BA41230003903A /* FirstTutorialSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTutorialSheet.m; sourceTree = "<group>"; };
+		AAF51F9516BA41230003903A /* SecondTutorialSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTutorialSheet.h; sourceTree = "<group>"; };
+		AAF51F9616BA41230003903A /* SecondTutorialSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTutorialSheet.m; sourceTree = "<group>"; };
+		AAF51F9716BA41230003903A /* ThirdTutorialSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTutorialSheet.h; sourceTree = "<group>"; };
+		AAF51F9816BA41230003903A /* ThirdTutorialSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTutorialSheet.m; sourceTree = "<group>"; };
+		AAF51F9D16BA41570003903A /* balloon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon1.png; sourceTree = "<group>"; };
+		AAF51F9E16BA41570003903A /* balloon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon1@2x.png"; sourceTree = "<group>"; };
+		AAF51F9F16BA41570003903A /* balloon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon2.png; sourceTree = "<group>"; };
+		AAF51FA016BA41570003903A /* balloon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon2@2x.png"; sourceTree = "<group>"; };
+		AAF51FA116BA41570003903A /* balloon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon3.png; sourceTree = "<group>"; };
+		AAF51FA216BA41570003903A /* balloon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon3@2x.png"; sourceTree = "<group>"; };
+		AAF51FA316BA41570003903A /* balloon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon4.png; sourceTree = "<group>"; };
+		AAF51FA416BA41570003903A /* balloon4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon4@2x.png"; sourceTree = "<group>"; };
+		AAF51FA516BA41570003903A /* balloon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon5.png; sourceTree = "<group>"; };
+		AAF51FA616BA41570003903A /* balloon5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon5@2x.png"; sourceTree = "<group>"; };
+		AAF51FA716BA41570003903A /* balloon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon6.png; sourceTree = "<group>"; };
+		AAF51FA816BA41570003903A /* balloon6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon6@2x.png"; sourceTree = "<group>"; };
+		AAF51FB716BA41880003903A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		AAF51FB816BA41880003903A /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
+		AAF51FB916BA41880003903A /* sync.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync.png; sourceTree = "<group>"; };
+		AAF51FBA16BA41880003903A /* sync@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sync@2x.png"; sourceTree = "<group>"; };
+		AAF51FBB16BA41880003903A /* view_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_bg.png; sourceTree = "<group>"; };
+		AAF51FBC16BA41880003903A /* view_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_bg@2x.png"; sourceTree = "<group>"; };
+		AAF51FBD16BA41880003903A /* view_surface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_surface.png; sourceTree = "<group>"; };
+		AAF51FBE16BA41880003903A /* view_surface@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_surface@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAF51F6016BA40970003903A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF51F6716BA40970003903A /* UIKit.framework in Frameworks */,
+				AAF51F6916BA40970003903A /* Foundation.framework in Frameworks */,
+				AAF51F6B16BA40970003903A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAF51F5A16BA40970003903A = {
+			isa = PBXGroup;
+			children = (
+				AAF51F6C16BA40970003903A /* QBAnimationSequence */,
+				AAF51F6516BA40970003903A /* Frameworks */,
+				AAF51F6416BA40970003903A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAF51F6416BA40970003903A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F6316BA40970003903A /* QBAnimationSequence.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAF51F6516BA40970003903A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F6616BA40970003903A /* UIKit.framework */,
+				AAF51F6816BA40970003903A /* Foundation.framework */,
+				AAF51F6A16BA40970003903A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF51F6C16BA40970003903A /* QBAnimationSequence */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F9216BA40C40003903A /* Classes */,
+				AAF51F7516BA40970003903A /* AppDelegate.h */,
+				AAF51F7616BA40970003903A /* AppDelegate.m */,
+				AAF51F7E16BA40970003903A /* MainStoryboard.storyboard */,
+				AAF51F8116BA40970003903A /* ViewController.h */,
+				AAF51F8216BA40970003903A /* ViewController.m */,
+				AAF51FB516BA41620003903A /* TutorialSheets */,
+				AAF51F9C16BA412D0003903A /* Resources */,
+				AAF51F6D16BA40970003903A /* Supporting Files */,
+			);
+			path = QBAnimationSequence;
+			sourceTree = "<group>";
+		};
+		AAF51F6D16BA40970003903A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F6E16BA40970003903A /* QBAnimationSequence-Info.plist */,
+				AAF51F6F16BA40970003903A /* InfoPlist.strings */,
+				AAF51F7216BA40970003903A /* main.m */,
+				AAF51F7416BA40970003903A /* QBAnimationSequence-Prefix.pch */,
+				AAF51F7816BA40970003903A /* Default.png */,
+				AAF51F7A16BA40970003903A /* Default@2x.png */,
+				AAF51F7C16BA40970003903A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAF51F9216BA40C40003903A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F8D16BA40C10003903A /* QBAnimationSequence.h */,
+				AAF51F8C16BA40C10003903A /* QBAnimationSequence.m */,
+				AAF51F8916BA40C10003903A /* QBAnimationGroup.h */,
+				AAF51F8A16BA40C10003903A /* QBAnimationGroup.m */,
+				AAF51F8B16BA40C10003903A /* QBAnimationItem.h */,
+				AAF51F8E16BA40C10003903A /* QBAnimationItem.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AAF51F9C16BA412D0003903A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51FB616BA41730003903A /* First */,
+				AAF51FC716BA418C0003903A /* Second */,
+				AAF51FC816BA419A0003903A /* Third */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AAF51FB516BA41620003903A /* TutorialSheets */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F9316BA41230003903A /* FirstTutorialSheet.h */,
+				AAF51F9416BA41230003903A /* FirstTutorialSheet.m */,
+				AAF51F9516BA41230003903A /* SecondTutorialSheet.h */,
+				AAF51F9616BA41230003903A /* SecondTutorialSheet.m */,
+				AAF51F9716BA41230003903A /* ThirdTutorialSheet.h */,
+				AAF51F9816BA41230003903A /* ThirdTutorialSheet.m */,
+			);
+			name = TutorialSheets;
+			sourceTree = "<group>";
+		};
+		AAF51FB616BA41730003903A /* First */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51F9D16BA41570003903A /* balloon1.png */,
+				AAF51F9E16BA41570003903A /* balloon1@2x.png */,
+				AAF51F9F16BA41570003903A /* balloon2.png */,
+				AAF51FA016BA41570003903A /* balloon2@2x.png */,
+				AAF51FA116BA41570003903A /* balloon3.png */,
+				AAF51FA216BA41570003903A /* balloon3@2x.png */,
+				AAF51FA316BA41570003903A /* balloon4.png */,
+				AAF51FA416BA41570003903A /* balloon4@2x.png */,
+				AAF51FA516BA41570003903A /* balloon5.png */,
+				AAF51FA616BA41570003903A /* balloon5@2x.png */,
+				AAF51FA716BA41570003903A /* balloon6.png */,
+				AAF51FA816BA41570003903A /* balloon6@2x.png */,
+			);
+			name = First;
+			sourceTree = "<group>";
+		};
+		AAF51FC716BA418C0003903A /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51FBB16BA41880003903A /* view_bg.png */,
+				AAF51FBC16BA41880003903A /* view_bg@2x.png */,
+				AAF51FBD16BA41880003903A /* view_surface.png */,
+				AAF51FBE16BA41880003903A /* view_surface@2x.png */,
+			);
+			name = Second;
+			sourceTree = "<group>";
+		};
+		AAF51FC816BA419A0003903A /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				AAF51FB716BA41880003903A /* cloud.png */,
+				AAF51FB816BA41880003903A /* cloud@2x.png */,
+				AAF51FB916BA41880003903A /* sync.png */,
+				AAF51FBA16BA41880003903A /* sync@2x.png */,
+			);
+			name = Third;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAF51F6216BA40970003903A /* QBAnimationSequence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF51F8616BA40970003903A /* Build configuration list for PBXNativeTarget "QBAnimationSequence" */;
+			buildPhases = (
+				AAF51F5F16BA40970003903A /* Sources */,
+				AAF51F6016BA40970003903A /* Frameworks */,
+				AAF51F6116BA40970003903A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBAnimationSequence;
+			productName = QBAnimationSequence;
+			productReference = AAF51F6316BA40970003903A /* QBAnimationSequence.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAF51F5B16BA40970003903A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Katsuma Tanaka";
+			};
+			buildConfigurationList = AAF51F5E16BA40970003903A /* Build configuration list for PBXProject "QBAnimationSequence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AAF51F5A16BA40970003903A;
+			productRefGroup = AAF51F6416BA40970003903A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF51F6216BA40970003903A /* QBAnimationSequence */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAF51F6116BA40970003903A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF51F7116BA40970003903A /* InfoPlist.strings in Resources */,
+				AAF51F7916BA40970003903A /* Default.png in Resources */,
+				AAF51F7B16BA40970003903A /* Default@2x.png in Resources */,
+				AAF51F7D16BA40970003903A /* Default-568h@2x.png in Resources */,
+				AAF51F8016BA40970003903A /* MainStoryboard.storyboard in Resources */,
+				AAF51FA916BA41570003903A /* balloon1.png in Resources */,
+				AAF51FAA16BA41570003903A /* balloon1@2x.png in Resources */,
+				AAF51FAB16BA41570003903A /* balloon2.png in Resources */,
+				AAF51FAC16BA41570003903A /* balloon2@2x.png in Resources */,
+				AAF51FAD16BA41570003903A /* balloon3.png in Resources */,
+				AAF51FAE16BA41570003903A /* balloon3@2x.png in Resources */,
+				AAF51FAF16BA41570003903A /* balloon4.png in Resources */,
+				AAF51FB016BA41570003903A /* balloon4@2x.png in Resources */,
+				AAF51FB116BA41570003903A /* balloon5.png in Resources */,
+				AAF51FB216BA41570003903A /* balloon5@2x.png in Resources */,
+				AAF51FB316BA41570003903A /* balloon6.png in Resources */,
+				AAF51FB416BA41570003903A /* balloon6@2x.png in Resources */,
+				AAF51FBF16BA41880003903A /* cloud.png in Resources */,
+				AAF51FC016BA41880003903A /* cloud@2x.png in Resources */,
+				AAF51FC116BA41880003903A /* sync.png in Resources */,
+				AAF51FC216BA41880003903A /* sync@2x.png in Resources */,
+				AAF51FC316BA41880003903A /* view_bg.png in Resources */,
+				AAF51FC416BA41880003903A /* view_bg@2x.png in Resources */,
+				AAF51FC516BA41880003903A /* view_surface.png in Resources */,
+				AAF51FC616BA41880003903A /* view_surface@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAF51F5F16BA40970003903A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF51F7316BA40970003903A /* main.m in Sources */,
+				AAF51F7716BA40970003903A /* AppDelegate.m in Sources */,
+				AAF51F8316BA40970003903A /* ViewController.m in Sources */,
+				AAF51F8F16BA40C10003903A /* QBAnimationGroup.m in Sources */,
+				AAF51F9016BA40C10003903A /* QBAnimationSequence.m in Sources */,
+				AAF51F9116BA40C10003903A /* QBAnimationItem.m in Sources */,
+				AAF51F9916BA41230003903A /* FirstTutorialSheet.m in Sources */,
+				AAF51F9A16BA41230003903A /* SecondTutorialSheet.m in Sources */,
+				AAF51F9B16BA41230003903A /* ThirdTutorialSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAF51F6F16BA40970003903A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF51F7016BA40970003903A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AAF51F7E16BA40970003903A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF51F7F16BA40970003903A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAF51F8416BA40970003903A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AAF51F8516BA40970003903A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAF51F8716BA40970003903A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QBAnimationSequence/QBAnimationSequence-Prefix.pch";
+				INFOPLIST_FILE = "QBAnimationSequence/QBAnimationSequence-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AAF51F8816BA40970003903A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QBAnimationSequence/QBAnimationSequence-Prefix.pch";
+				INFOPLIST_FILE = "QBAnimationSequence/QBAnimationSequence-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAF51F5E16BA40970003903A /* Build configuration list for PBXProject "QBAnimationSequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF51F8416BA40970003903A /* Debug */,
+				AAF51F8516BA40970003903A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF51F8616BA40970003903A /* Build configuration list for PBXNativeTarget "QBAnimationSequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF51F8716BA40970003903A /* Debug */,
+				AAF51F8816BA40970003903A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAF51F5B16BA40970003903A /* Project object */;
+}

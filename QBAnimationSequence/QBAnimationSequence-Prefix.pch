@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'QBAnimationSequenceTest' target in the 'QBAnimationSequenceTest' project
+// Prefix header for all source files of the 'QBAnimationSequence' target in the 'QBAnimationSequence' project
 //
 
 #import <Availability.h>
