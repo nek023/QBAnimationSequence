@@ -6,7 +6,7 @@ QBAnimationSequence is a library for controlling continuous view animations.
 
 
 ## ScreenShot
-![ss01.png](http://adotout.sakura.ne.jp/github/QBAnimationSequence/ss01.png)
+![ss01.png](http://adotout.sakura.ne.jp/github/QBAnimationSequence/ss01.png)  
 ![ss02.png](http://adotout.sakura.ne.jp/github/QBAnimationSequence/ss02.png)
 
 
