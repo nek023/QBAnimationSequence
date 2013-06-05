@@ -110,7 +110,9 @@
         
         if(group.waitUntilDone) {
             [UIView animateWithDuration:item.duration delay:item.delay options:item.options animations:item.animations completion:^(BOOL finished) {
-                [self animationFinished];
+                if (finished) {
+                    [self animationFinished];
+                }
             }];
         } else {
             [UIView animateWithDuration:item.duration delay:item.delay options:item.options animations:item.animations completion:nil];
