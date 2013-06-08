@@ -422,6 +422,7 @@
 		AAF51F8716BA40970003903A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QBAnimationSequence/QBAnimationSequence-Prefix.pch";
 				INFOPLIST_FILE = "QBAnimationSequence/QBAnimationSequence-Info.plist";
@@ -433,6 +434,7 @@
 		AAF51F8816BA40970003903A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QBAnimationSequence/QBAnimationSequence-Prefix.pch";
 				INFOPLIST_FILE = "QBAnimationSequence/QBAnimationSequence-Info.plist";
@@ -460,6 +462,7 @@
 				AAF51F8816BA40970003903A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

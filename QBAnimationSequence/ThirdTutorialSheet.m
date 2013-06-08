@@ -42,9 +42,6 @@
             view2.transform = CGAffineTransformMakeScale(1, 1);
         }];
         
-        [view1 release];
-        [view2 release];
-        
         QBAnimationGroup *group1 = [QBAnimationGroup groupWithItems:@[item1, item2]];
         QBAnimationGroup *group2 = [QBAnimationGroup groupWithItems:@[item1, item3]];
         
@@ -53,13 +50,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_sequence release];
-    
-    [super dealloc];
 }
 
 @end

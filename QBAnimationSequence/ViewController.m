@@ -25,28 +25,17 @@
     
     FirstTutorialSheet *firstSheet = [[FirstTutorialSheet alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
     [self.tutorialView addSubview:firstSheet];
-    [firstSheet release];
     
     SecondTutorialSheet *secondSheet = [[SecondTutorialSheet alloc] initWithFrame:CGRectMake(320, 0, 320, 240)];
     [self.tutorialView addSubview:secondSheet];
-    [secondSheet release];
     
     ThirdTutorialSheet *thirdSheet = [[ThirdTutorialSheet alloc] initWithFrame:CGRectMake(640, 0, 320, 240)];
     [self.tutorialView addSubview:thirdSheet];
-    [thirdSheet release];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)dealloc
-{
-    [_tutorialView release];
-    [_pageControl release];
-    
-    [super dealloc];
 }
 
 

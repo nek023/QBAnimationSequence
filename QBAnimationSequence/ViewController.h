@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>
 
-@property (retain, nonatomic) IBOutlet UIScrollView *tutorialView;
-@property (retain, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) IBOutlet UIScrollView *tutorialView;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end

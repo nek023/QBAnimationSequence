@@ -39,21 +39,11 @@
             view2.frame = CGRectMake(0, 0, 120, 180);
         }]];
         
-        [view1 release];
-        [view2 release];
-        
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[group1, group2] repeat:YES];
         [_sequence start];
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_sequence release];
-    
-    [super dealloc];
 }
 
 @end

@@ -16,17 +16,17 @@
 
 + (id)group
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 + (id)groupWithItem:(QBAnimationItem *)item
 {
-    return [[[self alloc] initWithItem:item] autorelease];
+    return [[self alloc] initWithItem:item];
 }
 
 + (id)groupWithItems:(NSArray *)items
 {
-    return [[[self alloc] initWithItems:items] autorelease];
+    return [[self alloc] initWithItems:items];
 }
 
 - (id)init
@@ -49,13 +49,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_items release];
-    
-    [super dealloc];
 }
 
 @end

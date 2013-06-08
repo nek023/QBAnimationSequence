@@ -25,17 +25,17 @@
 
 + (id)sequence
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 + (id)sequenceWithAnimationGroups:(NSArray *)groups
 {
-    return [[[self alloc] initWithAnimationGroups:groups] autorelease];
+    return [[self alloc] initWithAnimationGroups:groups];
 }
 
 + (id)sequenceWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat
 {
-    return [[[self alloc] initWithAnimationGroups:groups repeat:repeat] autorelease];
+    return [[self alloc] initWithAnimationGroups:groups repeat:repeat];
 }
 
 - (id)init
@@ -60,13 +60,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_groups release];
-    
-    [super dealloc];
 }
 
 

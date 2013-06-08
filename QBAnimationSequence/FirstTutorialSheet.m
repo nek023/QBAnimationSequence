@@ -146,13 +146,6 @@
             view6.frame = rect6;
         }]];
         
-        [view1 release];
-        [view2 release];
-        [view3 release];
-        [view4 release];
-        [view5 release];
-        [view6 release];
-        
         _sequence = [[QBAnimationSequence alloc] initWithAnimationGroups:@[
                      ex4, sh4,
                      move1, move2,
@@ -173,10 +166,4 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [_sequence release];
-    
-    [super dealloc];
-}
 @end

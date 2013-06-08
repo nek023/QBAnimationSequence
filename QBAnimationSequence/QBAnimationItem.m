@@ -14,12 +14,12 @@
 
 + (id)item
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 + (id)itemWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
 {
-    return [[[self alloc] initWithDuration:duration delay:delay options:options animations:animations] autorelease];
+    return [[self alloc] initWithDuration:duration delay:delay options:options animations:animations];
 }
 
 - (id)init
@@ -39,13 +39,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_animations release];
-    
-    [super dealloc];
 }
 
 @end
