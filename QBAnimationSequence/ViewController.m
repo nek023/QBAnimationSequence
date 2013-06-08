@@ -33,17 +33,13 @@
     [self.tutorialView addSubview:thirdSheet];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
     CGPoint contentOffset = self.tutorialView.contentOffset;
-    NSInteger currentPage = contentOffset.x / 320;
+    NSInteger currentPage = contentOffset.x / 320.0;
     
     self.pageControl.currentPage = currentPage;
 }

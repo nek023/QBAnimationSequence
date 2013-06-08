@@ -12,13 +12,20 @@
 #import "QBAnimationGroup.h"
 #import "QBAnimationItem.h"
 
+@interface FirstTutorialSheet ()
+{
+    QBAnimationSequence *_sequence;
+}
+
+@end
+
 @implementation FirstTutorialSheet
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     
-    if(self) {
+    if (self) {
         self.backgroundColor = [UIColor whiteColor];
         self.clipsToBounds = YES;
         

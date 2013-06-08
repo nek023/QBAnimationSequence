@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class QBAnimationSequence;
-
 @interface FirstTutorialSheet : UIView
-{
-    QBAnimationSequence *_sequence;
-}
 
 @end

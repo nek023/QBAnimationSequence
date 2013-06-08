@@ -10,6 +10,9 @@
 
 #import "QBAnimationSequence.h"
 
+#import "QBAnimationGroup.h"
+#import "QBAnimationItem.h"
+
 @interface QBAnimationSequence ()
 
 @property (nonatomic, assign) BOOL running;
@@ -23,36 +26,31 @@
 
 @implementation QBAnimationSequence
 
-+ (id)sequence
++ (instancetype)sequence
 {
     return [[self alloc] init];
 }
 
-+ (id)sequenceWithAnimationGroups:(NSArray *)groups
++ (instancetype)sequenceWithAnimationGroups:(NSArray *)groups
 {
     return [[self alloc] initWithAnimationGroups:groups];
 }
 
-+ (id)sequenceWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat
++ (instancetype)sequenceWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat
 {
     return [[self alloc] initWithAnimationGroups:groups repeat:repeat];
 }
 
-- (id)init
-{
-    return [self initWithAnimationGroups:nil repeat:NO];
-}
-
-- (id)initWithAnimationGroups:(NSArray *)groups
+- (instancetype)initWithAnimationGroups:(NSArray *)groups
 {
     return [self initWithAnimationGroups:groups repeat:NO];
 }
 
-- (id)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat
+- (instancetype)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat
 {
     self = [super init];
     
-    if(self) {
+    if (self) {
         self.groups = groups;
         self.repeat = repeat;
         
@@ -62,12 +60,17 @@
     return self;
 }
 
+- (instancetype)init
+{
+    return [self initWithAnimationGroups:nil repeat:NO];
+}
 
-#pragma mark -
+
+#pragma mark - Animation
 
 - (void)start
 {
-    if(self.running) return;
+    if (self.running) return;
     
     self.running = YES;
     
@@ -84,10 +87,10 @@
 
 - (void)performNextGroup
 {
-    if(!self.running) return;
+    if (!self.running) return;
     
-    if(self.currentGroup >= self.groups.count) {
-        if(self.repeat) {
+    if (self.currentGroup >= self.groups.count) {
+        if (self.repeat) {
             self.running = NO;
             
             [self start];
@@ -98,10 +101,10 @@
     
     QBAnimationGroup *group = (QBAnimationGroup *)[self.groups objectAtIndex:self.currentGroup];
     
-    for(NSInteger i = 0; i < group.items.count; i++) {
+    for (NSInteger i = 0; i < group.items.count; i++) {
         QBAnimationItem *item = (QBAnimationItem *)[group.items objectAtIndex:i];
         
-        if(group.waitUntilDone) {
+        if (group.waitUntilDone) {
             [UIView animateWithDuration:item.duration delay:item.delay options:item.options animations:item.animations completion:^(BOOL finished) {
                 if (finished) {
                     [self animationFinished];
@@ -112,7 +115,7 @@
         }
     }
     
-    if(!group.waitUntilDone) {
+    if (!group.waitUntilDone) {
         self.currentGroup++;
         
         [self performNextGroup];
@@ -125,7 +128,7 @@
     
     QBAnimationGroup *group = (QBAnimationGroup *)[self.groups objectAtIndex:self.currentGroup];
     
-    if(self.finishedCount == group.items.count) {
+    if (self.finishedCount == group.items.count) {
         self.finishedCount = 0;
         
         self.currentGroup++;

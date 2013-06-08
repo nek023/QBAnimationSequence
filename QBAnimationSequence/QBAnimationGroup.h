@@ -17,11 +17,11 @@
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, assign) BOOL waitUntilDone;
 
-+ (id)group;
-+ (id)groupWithItem:(QBAnimationItem *)item;
-+ (id)groupWithItems:(NSArray *)items;
++ (instancetype)group;
++ (instancetype)groupWithItem:(QBAnimationItem *)item;
++ (instancetype)groupWithItems:(NSArray *)items;
 
-- (id)initWithItem:(QBAnimationItem *)item;
-- (id)initWithItems:(NSArray *)items;
+- (instancetype)initWithItem:(QBAnimationItem *)item;
+- (instancetype)initWithItems:(NSArray *)items;
 
 @end

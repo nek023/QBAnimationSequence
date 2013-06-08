@@ -10,24 +10,22 @@
 
 #import <Foundation/Foundation.h>
 
-#import "QBAnimationGroup.h"
-#import "QBAnimationItem.h"
-
-typedef enum {
+typedef NS_ENUM(NSInteger, QBAnimationSequenceState) {
     QBAnimationSequenceStatePlaying,
     QBAnimationSequenceStateStopped
-} QBAnimationSequenceState;
+};
 
 @interface QBAnimationSequence : NSObject
 
 @property (nonatomic, copy) NSArray *groups;
 @property (nonatomic, assign) BOOL repeat;
 
-+ (id)sequence;
-+ (id)sequenceWithAnimationGroups:(NSArray *)groups;
-+ (id)sequenceWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
-- (id)initWithAnimationGroups:(NSArray *)groups;
-- (id)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
++ (instancetype)sequence;
++ (instancetype)sequenceWithAnimationGroups:(NSArray *)groups;
++ (instancetype)sequenceWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
+
+- (instancetype)initWithAnimationGroups:(NSArray *)groups;
+- (instancetype)initWithAnimationGroups:(NSArray *)groups repeat:(BOOL)repeat;
 
 - (void)start;
 - (void)stop;

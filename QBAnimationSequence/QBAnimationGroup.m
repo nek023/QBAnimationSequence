@@ -14,41 +14,41 @@
 
 @implementation QBAnimationGroup
 
-+ (id)group
++ (instancetype)group
 {
     return [[self alloc] init];
 }
 
-+ (id)groupWithItem:(QBAnimationItem *)item
++ (instancetype)groupWithItem:(QBAnimationItem *)item
 {
     return [[self alloc] initWithItem:item];
 }
 
-+ (id)groupWithItems:(NSArray *)items
++ (instancetype)groupWithItems:(NSArray *)items
 {
     return [[self alloc] initWithItems:items];
 }
 
-- (id)init
-{
-    return [self initWithItems:nil];
-}
-
-- (id)initWithItem:(QBAnimationItem *)item
+- (instancetype)initWithItem:(QBAnimationItem *)item
 {
     return [self initWithItems:[NSArray arrayWithObject:item]];
 }
 
-- (id)initWithItems:(NSArray *)items
+- (instancetype)initWithItems:(NSArray *)items
 {
     self = [super init];
     
-    if(self) {
+    if (self) {
         self.items = items;
         self.waitUntilDone = YES;
     }
     
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithItems:nil];
 }
 
 @end

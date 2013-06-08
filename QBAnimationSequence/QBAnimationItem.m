@@ -12,26 +12,21 @@
 
 @implementation QBAnimationItem
 
-+ (id)item
++ (instancetype)item
 {
     return [[self alloc] init];
 }
 
-+ (id)itemWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
++ (instancetype)itemWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
 {
     return [[self alloc] initWithDuration:duration delay:delay options:options animations:animations];
 }
 
-- (id)init
-{
-    return [self initWithDuration:0 delay:0 options:UIViewAnimationOptionCurveLinear animations:NULL];
-}
-
-- (id)initWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
+- (instancetype)initWithDuration:(CGFloat)duration delay:(CGFloat)delay options:(UIViewAnimationOptions)options animations:(QBAnimationBlock)animations
 {
     self = [super init];
     
-    if(self) {
+    if (self) {
         self.duration = duration;
         self.delay = delay;
         self.options = options;
@@ -39,6 +34,11 @@
     }
     
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithDuration:0 delay:0 options:UIViewAnimationOptionCurveLinear animations:NULL];
 }
 
 @end
