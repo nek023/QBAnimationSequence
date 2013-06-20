@@ -109,6 +109,9 @@
                 if (finished) {
                     [self animationFinished];
                 }
+                else {
+                    self.running = NO;
+                }
             }];
         } else {
             [UIView animateWithDuration:item.duration delay:item.delay options:item.options animations:item.animations completion:nil];
